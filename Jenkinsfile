@@ -1,3 +1,5 @@
+@Library('build-plugin-test') _
+
 def labelNode = 'downtime-detection'
 
 buildPlugin(
