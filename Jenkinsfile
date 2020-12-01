@@ -1,6 +1,6 @@
 @Library('build-plugin-test') _
 
-def labelNode = 'build-jenkins-plugins'
+def labelNode = 'downtime-detection'
 
 buildPlugin(
     platforms: [labelNode],
