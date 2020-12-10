@@ -1,6 +1,8 @@
 def labelNode = 'build-jenkins-plugins'
 
 buildPlugin(
+//    tests: [skip: true],
+    useAci: true,    
     platforms: [labelNode],
     jenkinsVersions: [null],
     findbugs: [run: true, archive: true],
