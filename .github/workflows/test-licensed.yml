@@ -1,0 +1,25 @@
+name: Testing licensed on Java project
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+      with:
+        fetch-depth: 0 # prefer to use a full fetch for licensed workflows
+    - name: Setup github/licensed
+      uses: jonabc/setup-licensed@v1.0.2
+      with:
+        version: '2.x' # required: supports matching based on string equivalence or node-semver range
+        # install-dir: /path/to/install/at # optional: defaults to /usr/local/bin
+        github_token: # optional: allows users to make authenticated requests to GitHub's APIs
+    - name: npm install
+      run: npm install # install dependencies in local environment
+    - name: run licensed
+      run: licensed list
