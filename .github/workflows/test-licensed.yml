@@ -19,7 +19,7 @@ jobs:
         version: '2.x' # required: supports matching based on string equivalence or node-semver range
         # install-dir: /path/to/install/at # optional: defaults to /usr/local/bin
         github_token: # optional: allows users to make authenticated requests to GitHub's APIs
-    - name: npm install
-      run: npm install # install dependencies in local environment
+    - name: mvn install (npm didnt work)
+      run: mvn install # install dependencies in local environment
     - name: run licensed
       run: licensed list
